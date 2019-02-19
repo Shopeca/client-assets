@@ -1,0 +1,15 @@
+{
+	"name": "shopeca/client-assets",
+	"description": "Default client assets for Shopeca and Webic",
+	"homepage": "https://github.com/Shopeca/client-assets",
+	"version": "1.0.0",
+	"license": "GPL-3.0",
+	"keywords": ["Shopeca", "LESS", "CSS", "Javascript", "JS"],
+	"authors": [
+		{
+			"name": "Shopeca s.r.o.",
+			"email": "info@shopeca.cz"
+		}
+	],
+	"minimum-stability": "dev"
+}

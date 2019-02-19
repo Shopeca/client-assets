@@ -1,0 +1,74 @@
+// Grays
+// -------------------------
+@black:            #000;
+@grayDarkest:      #222;
+@grayDarker:       #444;
+@grayDark:         #666;
+@gray:             #999;
+@grayLight:        #bbb;
+@grayLighter:      #ddd;
+@grayLightest:     #eee;
+@white:            #fff;
+
+// Z-Indexes
+// -------------------------
+
+@z-index-1:     1;
+@z-index-2:     2;
+@z-index-3:     3;
+@z-index-4:     4;
+@z-index-5:     5;
+@z-index-6:     6;
+@z-index-7:     7;
+@z-index-8:     8;
+@z-index-9:     9;
+@z-index-10:    10;
+
+// Responsivness
+// -------------------------
+
+@phone-upper-boundary: 600px;
+@tablet-portrait-upper-boundary: 900px;
+@tablet-landscape-upper-boundary: 1200px;
+@desktop-upper-boundary: 1800px;
+
+.for-size(@range; @rules) when (@range = phone-only) {
+	@media (max-width: (@phone-upper-boundary - 1px)) {
+		@rules();
+	}
+}
+.for-size(@range; @rules) when (@range = tablet-portrait-up) {
+	@media (min-width: @phone-upper-boundary) {
+		@rules();
+	}
+}
+.for-size(@range; @rules) when (@range = tablet-landscape-up) {
+	@media (min-width: @tablet-portrait-upper-boundary) {
+		@rules();
+	}
+}
+.for-size(@range; @rules) when (@range = tablet-portrait-down) {
+	@media (max-width: (@tablet-portrait-upper-boundary - 1px)) {
+		@rules();
+	}
+}
+.for-size(@range; @rules) when (@range = tablet-down) {
+	@media (max-width: (@tablet-landscape-upper-boundary - 1px)) {
+		@rules();
+	}
+}
+.for-size(@range; @rules) when (@range = desktop-up) {
+	@media (min-width: @tablet-landscape-upper-boundary) {
+		@rules();
+	}
+}
+.for-size(@range; @rules) when (@range = desktop-down) {
+	@media (max-width: (@desktop-upper-boundary - 1px)) {
+		@rules();
+	}
+}
+.for-size(@range; @rules) when (@range = big-desktop-up) {
+	@media (min-width: @desktop-upper-boundary) {
+		@rules();
+	}
+}
