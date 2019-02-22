@@ -2,7 +2,7 @@
 	"name": "shopeca/client-assets",
 	"description": "Default client assets for Shopeca and Webic",
 	"homepage": "https://github.com/Shopeca/client-assets",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "GPL-3.0",
 	"keywords": ["Shopeca", "LESS", "CSS", "Javascript", "JS"],
 	"authors": [
@@ -11,5 +11,10 @@
 			"email": "info@shopeca.cz"
 		}
 	],
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"Shopeca\\ClientAssets\\": ""
+		}
+	}
 }
